@@ -1,0 +1,127 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background-size: 400% 400%;
+  animation: bgMove 10s ease infinite;
+  color: #333;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #ff4f8b;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.todo-app {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #ff4f8b;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ffd1dc;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ff4f8b;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background: #ff2f75;
+}
+
+/* ===== TODO LIST ===== */
+#taskList {
+  list-style: none;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  background: #ffe6ee;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#taskList li span {
+  flex: 1;
+}
+
+#taskList li button {
+  width: auto;
+  padding: 6px 12px;
+  background: #ff4f8b;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+#taskList li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}

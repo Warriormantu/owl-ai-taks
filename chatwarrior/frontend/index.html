@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatWarrior - Real-Time Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+  <!-- Login Screen -->
+  <div id="login" class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h1>ChatWarrior</h1>
+        <p>Connect in Real-Time</p>
+      </div>
+
+      <div class="login-form">
+        <input type="text" id="username" placeholder="Enter your username" maxlength="20">
+        <button onclick="joinChat()" class="btn-primary">Join Chat</button>
+      </div>
+
+      <p class="login-footer">Start chatting with others instantly</p>
+    </div>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chat" class="hidden chat-wrapper">
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="header-content">
+        <h1>ChatWarrior</h1>
+        <p id="userDisplay" class="user-badge"></p>
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="messages" class="messages-container"></div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <input 
+        type="text" 
+        id="messageInput" 
+        placeholder="Type a message..." 
+        autocomplete="off"
+        onkeypress="handleKeyPress(event)"
+      >
+      <button onclick="sendMessage()" class="btn-send">
+        <span>Send</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

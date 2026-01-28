@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do Warrior</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>To-Do Warrior</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="todo-app">
+      <h2>Your To-Do List</h2>
+
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Add a new task..." 
+      />
+
+      <button id="addTaskBtn">Add Task</button>
+
+      <ol id="taskList"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 To-Do Warrior. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
